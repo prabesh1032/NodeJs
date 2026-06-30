@@ -43,3 +43,9 @@ console.log(multi(10, 5));
 //npm => node Package manager
 //npm init 
 //npm init -y(if we need to to click right in all )
+//npm run <script_name>.
+//npm install <package_name>.//npm i <package_name>.
+//npm uninstall <package_name>
+//npm uninstall <package_name> @version
+//npm audit fix// this will fix if any high severity vulnerability  occur.
+//npm i//npm install  // it will install all ddependency package of project.

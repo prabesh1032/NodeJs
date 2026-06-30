@@ -1,12 +1,19 @@
 {
-  "name": "node-js",
+  "name": "js",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
+  "keywords": [],
   "description": "",
-  "type":"module"
+  "dependencies": {
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.1.1"
+  }
 }
