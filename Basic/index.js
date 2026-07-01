@@ -131,3 +131,36 @@ console.log("synchronous way to read file"); //first this will print then data o
 const data = fs.readFileSync("./math.js", "utf-8");
 console.log(data);
 //todo : write, append, copy, move,delete, mkdir
+//write
+fs.writeFile("./output.js", "console.log('Hello, World!');", "utf-8", (err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("File written successfully");
+    }
+});
+//append
+fs.appendFile("./output.txt", "Second line added!\n", "utf-8", (err) => {
+    if (err) return console.log("Append error:", err.message);
+    console.log("Content appended successfully");
+});
+//delete
+// ---- DELETE FILE ----
+// fs.unlink("./output.txt", (err) => {
+//     if (err) return console.log("Delete error:", err.message);
+//     console.log("File deleted");
+// });
+
+// ---- CREATE FOLDER ----
+const filepaths = path.join("server", "uploads", "images");
+fs.mkdir(filepaths, {
+    recursive: true
+}, (err) => { //recursive helps to make nested folder.
+    if (err) return console.log("Mkdir error:", err.message);
+    console.log("Folder created");
+});
+
+// fs.copyFile("./index.js", "./http.js", (err) => {
+//     if (err) return console.log("Copy error:", err.message);
+//     console.log("File copied successfully");
+// });
